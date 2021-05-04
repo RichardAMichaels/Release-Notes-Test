@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+    - main
+    - release/*
+name: GitHub Release to Noticeable
+  # You may pin to the exact commit or the version.
+  # uses: Nexmo/release-to-noticeable-action@2688fd7ddc8440378dcb8b1bfc0fe8c09e7fae31
+uses: Nexmo/release-to-noticeable-action@v1
+  with:
+    # Comma separated list of tags to add for any releases in this repo
+  tags: # optional, default is 
+    # Add a prefix to any releases. Useful when the release name is v1.2.3 and you want to add the repo name too
+  release_prefix: # optional, default is 
+    # Set to true to hide the repo URL in the changelog entry. Useful when repos are private
+  disable_repo_link: true
+    # Add the changelog entry as a draft
+  draft: true
+  
